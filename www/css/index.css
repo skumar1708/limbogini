@@ -1,0 +1,69 @@
+video {
+    width: 100%;
+    height: auto;
+}
+
+.mejs-container{
+	width:100% !important;
+}
+
+.col-xs-12 {
+	padding:0px !important;
+}
+.yt-uix-sessionlink{
+	display:none !important;
+}
+.ytp-icon{
+	display:none !important;
+}
+iframe {
+        width: 100%;
+		    overflow-y: hidden;
+    }
+@media only screen and (min-width: 400px) {
+    iframe {
+        width: 100%;
+    }
+	
+	iframe .yt-uix-sessionlink{
+		display:none !important;
+	}
+}
+.list-group{
+	  /*  // pointer-events: none !important; */
+}
+.glyphicon-nonescaped.glyphicon-calendar:before {
+  content: "\d83d\dcc5";
+}
+
+.playBtn{
+	float: right;
+    margin-top: -5px;
+	
+}
+.pauseBtn{
+	float: right;
+    margin-top: -5px;
+	
+}
+.rightShift{
+	    margin-right: 6px;
+    margin-top: -1px;
+}
+
+#watchBtn{
+	 width: 100px;
+    height: 35px;
+    top: 60%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+	position: absolute;	
+}
+
+#splash{
+	background:url('../img/bg.gif') no-repeat right top;
+	background-color: black;
+	height:100% !important;
+}
