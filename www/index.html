@@ -108,11 +108,8 @@
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-	var loaded = 0;
     jQuery(document).ready(function(){
-	
-			
-        window.$player = jQuery("#youtube-player").tubeplayer({
+      window.$player = jQuery("#youtube-player").tubeplayer({
             width: 380,
             height: 200,
 			modestbranding:false,
@@ -126,9 +123,6 @@
 			},
             onPlayerLoaded: function(){
 			$('.list-group').css('pointer-events','auto!important');
-			
-			loaded = 1;
-			
 			this.tubeplayer("volume", 100);
 			//this.tubeplayer("seek", "1:33"); // Jump to T.I.
 			 $('#progressBar').hide();
