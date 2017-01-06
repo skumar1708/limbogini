@@ -108,3 +108,6 @@ span.submit {
     -moz-transform: rotate(-90deg);
     -o-transform: rotate(-90deg);
 }
+.progress{
+	border-radius:0px!important;
+}
