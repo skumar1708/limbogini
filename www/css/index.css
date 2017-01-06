@@ -67,3 +67,44 @@ iframe {
 	background-color: black;
 	height:100% !important;
 }
+
+
+span.submit {
+    writing-mode: tb-rl;
+    z-index: 999;
+    position: fixed;
+    top: 22px;
+    padding: 5px 10px;
+    left: 4px;
+    cursor: pointer;
+    border: none;
+    background: #6B5645;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 1px #6B5645;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6B5645), to(#513E2F));
+    background-image: -webkit-linear-gradient(#6B5645, #513E2F);
+    background-image: -moz-linear-gradient(#6B5645, #513E2F);
+    background-image: -ms-linear-gradient(#6B5645, #513E2F);
+    background-image: -o-linear-gradient(#6B5645, #513E2F);
+    background-image: linear-gradient(#6B5645, #513E2F);
+    -moz-border-radius-topleft: 19px;
+    -webkit-border-top-left-radius: 19px;
+   
+	
+	 border-top-left-radius: 19px;
+	border-bottom-right-radius: 19px;
+    border-bottom-left-radius: 19px;
+   
+    border-top-right-radius: 19px;
+	
+    -moz-border-radius-topright: 19px;
+    -webkit-border-top-right-radius: 19px;
+    border-top-right-radius: 19px;
+    -moz-box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .6);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
