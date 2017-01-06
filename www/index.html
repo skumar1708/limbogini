@@ -58,6 +58,15 @@
 	
     <div data-role="page" id="splash" data-theme="b">
 			<a id="watchBtn" class="btn btn-success"  href="#main" data-role="button">Watch</a>
+			<a href="#popupMenu" data-rel="popup" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-notext ui-icon-grid ui-btn-b ui-btn-inline"></a>
+			<div data-role="popup" id="popupMenu" data-theme="b">
+					<ul data-role="listview" data-inset="true" style="min-width:210px;">
+						<li data-role="list-divider">More apps...</li>
+						<li><a href="#https://play.google.com/store/apps/details?id=air.HelicopterGame&hl=en">AF1</a></li>
+						<li><a href="#https://play.google.com/store/apps/details?id=air.HealthApp&hl=en">BloodKart</a></li>
+						<li><a href="#https://play.google.com/store/apps/details?id=com.doodlefy.android&hl=en">Doodlefy</a></li>
+					</ul>
+			</div>
 	</div>
 	<div data-role="page" id="main">
 	  <div class="container">
@@ -74,6 +83,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<div id="youtube-player"></div>
+				<span class="submit">+10s</span>
 				<!-- <video id="video" height="100" width="200" preload="none">
 				  <source id="vsrc" type="video/youtube">
 				 
@@ -100,7 +110,6 @@
 					<a id="Su5NOKF2VS4" href="#" class="list-group-item">Episode 11<img class="playBtn" src="img/play.png"></a>
 					<a id="BV1IBP9HKZA" href="#" class="list-group-item">Episode 12<img class="playBtn" src="img/play.png"></a>
 					<a id="IsrNx2B87ig" href="#" class="list-group-item">Episode 13<img class="playBtn" src="img/play.png"></a>
-											
 			</div>
 		</div>
 	
@@ -108,8 +117,12 @@
     <!-- <script type="text/javascript" src="cordova.js"></script> -->
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
+        app.initialize();
+    </script>
+	<script type="text/javascript">
     jQuery(document).ready(function(){
-      window.$player = jQuery("#youtube-player").tubeplayer({
+	jQuery('#watchBtn').on('click',function(){	
+		  jQuery("#youtube-player").tubeplayer({
             width: 380,
             height: 200,
 			modestbranding:false,
@@ -125,7 +138,7 @@
 			$('.list-group').css('pointer-events','auto!important');
 			this.tubeplayer("volume", 100);
 			//this.tubeplayer("seek", "1:33"); // Jump to T.I.
-			 $('#progressBar').hide();
+			$('#progressBar').hide();
 			$("iframe").contents().find(".yt-uix-sessionlink").hide();
 			
             },
@@ -134,10 +147,14 @@
 			   $('.list-group').css('pointer-events','auto !important');
             }
         });
+	
+	});
+	var seeker = 0;
+	jQuery('.submit').on('click',function(){
+		seeker +=10;
+		jQuery("#youtube-player").tubeplayer('seek',seeker);
+	});
     });
-    </script>
-    <script type="text/javascript">
-        app.initialize();
     </script>
 	</div>
 </body>
