@@ -36,7 +36,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		document.addEventListener('backbutton', onBackKeyDown); //Listen to the User clicking on the back button	
         app.receivedEvent('deviceready');
     },
 	
@@ -78,7 +77,6 @@ var app = {
 		/* vdo.play(); */
 		$(this).find('img').attr('src','img/pause.png');
 		$(this).find('img').addClass('rightShift');
-		document.getElementsByClassName('ytp-watermark')[0].style.display = 'none';
 	}
 };
 
