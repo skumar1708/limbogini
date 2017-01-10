@@ -37,7 +37,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 		 document.addEventListener("pause", onPause, false);
-		 //document.addEventListener("backbutton", onBackKeyDown, false);
+		 document.addEventListener("backbutton", onBackKeyDown, false);
 		/* $( window ).on( "navigate", function() {
 		  alert( "navigated!" );
 		}); */
@@ -77,7 +77,7 @@ var app = {
     }
 
 	function onBackKeyDown(e) {
-		alert('back key pressed');
+		//alert('back key pressed');
 		e.preventDefault();
 		navigator.notification.confirm("Are you sure you want to exit ?", this.onConfirm, "Confirmation", "Yes,No"); 
 		// Prompt the user with the choice
