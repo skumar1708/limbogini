@@ -36,54 +36,48 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+		 document.addEventListener("pause", onPause, false);
+		 //document.addEventListener("backbutton", onBackKeyDown, false);
+		/* $( window ).on( "navigate", function() {
+		  alert( "navigated!" );
+		}); */
         app.receivedEvent('deviceready');
+		
     },
 	
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
+        /* var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+ */
+       console.log('Received Event: ' + id);
     },
 	btnClick:function(){
-		   
-       //$("iframe").contents().find(".yt-uix-sessionlink").hide();
+		
 		
 		var vid = $(event.currentTarget).attr('id');
 		jQuery("#youtube-player").tubeplayer('play',vid);
 		
-		/* var player = new MediaElementPlayer('#video');
-		
-		
-			player.setSrc('https://www.youtube.com/watch?v='+vid);
-			player.play(); */
 		$('img').removeClass('rightShift');
 		$('img').attr('src','img/play.png');
 		 console.log($(this).find('img').attr('src'));
-		/* var vdo = document.getElementById('video'); */
-		/* var vsrc = document.getElementById('vsrc');
-		vsrc.src = 'https://www.youtube.com/watch?v='+vid;
 		
-		player.play(); */
-		
-		/* $('video').mediaelementplayer(); */
-		/* vdo.load(); */ 
-		
-		/* vdo.play(); */
 		$(this).find('img').attr('src','img/pause.png');
 		$(this).find('img').addClass('rightShift');
 	}
 };
 
-		
+	function onPause() {
+       //alert(device.uuid);
+	   jQuery("#youtube-player").tubeplayer('pause');
+    }
 
 	function onBackKeyDown(e) {
-		alert(123);
+		alert('back key pressed');
 		e.preventDefault();
 		navigator.notification.confirm("Are you sure you want to exit ?", this.onConfirm, "Confirmation", "Yes,No"); 
 		// Prompt the user with the choice
