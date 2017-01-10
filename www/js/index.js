@@ -37,7 +37,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 		 document.addEventListener("pause", onPause, false);
-		 document.addEventListener("backbutton", onBackKeyDown, false);
+		 //document.addEventListener("backbutton", onBackKeyDown, false);
 		/* $( window ).on( "navigate", function() {
 		  alert( "navigated!" );
 		}); */
