@@ -78,7 +78,7 @@ var app = {
 
 	function onBackKeyDown(e) {
 		//alert('back key pressed');
-		e.preventDefault();
+		//e.preventDefault();
 		navigator.notification.confirm("Are you sure you want to exit ?", this.onConfirm, "Confirmation", "Yes,No"); 
 		// Prompt the user with the choice
 	}
